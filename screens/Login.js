@@ -43,17 +43,17 @@ export default class Login extends React.Component {
       return (
         <View style={{ flex: 1 }}>
           <ImageBackground
-            source={require('../assets/Background.jpg')}
+            source={require('../assets/bg1.jpg')}
             style={{
               flex: 1,
-              resizeMode: 'contain',
+              resizeMode: 'center',
             }}>
             <ScrollView>
               <Image
                 source={require('../assets/Logo.png')}
                 style={{
-                  width: '90%',
-                  height: 250,
+                  width: '80%',
+                  height: 230,
                   marginTop: '20%',
                   alignSelf: 'center',
                   resizeMode: 'contain',
@@ -64,10 +64,13 @@ export default class Login extends React.Component {
                 style={{
                   flexDirection: 'row',
                   width: '90%',
+                  height: 35,
                   alignSelf: 'center',
                   marginTop: 30,
                   justifyContent: 'center',
                   alignItems: 'center',
+                  backgroundColor:'gray',
+                  borderRadius:10
                 }}>
                 <FontAwesome name="at" size={24} color="white" />
                 <TextInput
@@ -87,10 +90,13 @@ export default class Login extends React.Component {
                 style={{
                   flexDirection: 'row',
                   width: '90%',
+                  height: 35,
                   alignSelf: 'center',
                   marginTop: 30,
                   justifyContent: 'center',
                   alignItems: 'center',
+                  backgroundColor:'gray',
+                  borderRadius:10
                 }}>
                 <MaterialCommunityIcons name="lock" size={24} color="white" />
                 <TextInput
@@ -107,46 +113,48 @@ export default class Login extends React.Component {
                 <Feather name="eye-off" size={24} color="white" />
               </View>
 
+           <TouchableOpacity>
               <Text
                 style={{
                   marginTop: 10,
-                  color: 'violet',
+                  color: 'blue',
                   fontWeight: 'bold',
                   alignSelf: 'flex-end',
                   marginHorizontal: '5%',
-                }}> Forgot Password?
-              </Text>
+                  fontSize:14
+                }} onPress={()=>{
+                  this.props.navigation.navigate('Forgot Password')
+                }}> Forgot Password?</Text>
+           </TouchableOpacity>
 
               <TouchableOpacity
                 style={{
-                  backgroundColor: 'lime',
-                  width: '70%',
-                  height: 40,
+                  backgroundColor: 'black',
+                  width: '60%',
+                  height: 50,
                   marginTop: 30,
                   borderRadius: 10,
                   alignSelf: 'center',
                   justifyContent: 'center',
                   alignItems: 'center',
+                }}
+                onPress={()=>{
+                  this.props.navigation.navigate('Home')
                 }}>
                 <Text
                   style={{
-                    fontSize: 30,
+                    fontSize: 35,
                     color: 'blue',
                     fontFamily: 'OldEnglish',
-                  }}>
-                  Login
-                </Text>
+                  }}> Sign In </Text>
               </TouchableOpacity>
 
               <Text
                 style={{
-                  color: '',
                   alignSelf: 'center',
                   marginTop: 30,
-                  fontSize: 20,
-                }}>
-                OR
-              </Text>
+                  fontSize: 25,
+                }}>OR</Text>
 
               <TouchableOpacity
                 style={{
@@ -154,7 +162,7 @@ export default class Login extends React.Component {
                   alignSelf: 'center',
                   backgroundColor: 'azure',
                   width: '90%',
-                  height: 40,
+                  height: 50,
                   borderRadius: 10,
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -170,29 +178,27 @@ export default class Login extends React.Component {
                     color: 'green',
                     fontFamily: 'OldEnglish',
                     fontSize: 30,
-                  }}>
-                  Login with Google
-                </Text>
+                  }}>Login with Google</Text>
               </TouchableOpacity>
-
-              <Text
-                style={{
-                  alignSelf: 'center',
-                  marginTop: 30,
-                  marginBottom: '10%',
-                  color: 'white',
-                  fontSize: '95%'
-                }}>
-                Don't have an account?
-                <TouchableOpacity>
+              <TouchableOpacity>
                 <Text
                   style={{
-                    color: 'blue',
-                    fontWeight: 'bold',
-                  }}>  Sign Up
+                    alignSelf: 'center',
+                    marginTop: 30,
+                    marginBottom: '10%',
+                    color: 'white',
+                    fontSize: 15,
+                  }}> Don't have an account?
+                  <Text
+                    style={{
+                      color: 'blue',
+                      fontWeight: 'bold',
+                    }}
+                    onPress={()=>{
+                      this.props.navigation.navigate('Sign Up')
+                    }}>  Sign Up</Text>
                 </Text>
-                </TouchableOpacity>
-              </Text>
+              </TouchableOpacity>
             </ScrollView>
           </ImageBackground>
         </View>
