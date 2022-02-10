@@ -99,8 +99,7 @@ export default class SignUp extends React.Component {
                   backgroundColor: 'black',
                   borderRadius: 10,
                 }}>
-                <FontAwesome name="at" size={24} color="blue" />
-                <TextInput
+<MaterialCommunityIcons name="fast-forward-10" size={24} color="blue" />                <TextInput
                   style={{
                     width: '80%',
                     height: 30,
@@ -154,7 +153,7 @@ export default class SignUp extends React.Component {
 
       <MaterialCommunityIcons name="lock" size={24} color="blue" />                    <TextInput
                   style={{
-                    width: '80%',
+                    width: '70%',
                     height: 30,
                     borderBottomWidth: 2,
                     paddingLeft: 10,
@@ -163,7 +162,8 @@ export default class SignUp extends React.Component {
                   placeholder="Password"
                   placeholderTextColor="gray"
                 />
-              </View>
+            <Feather name="eye-off" size={24} color="blue" />
+            </View>
 
               <View
                 style={{
@@ -179,7 +179,7 @@ export default class SignUp extends React.Component {
                 }}>
       <MaterialCommunityIcons name="lock-alert" size={24} color="blue"/>               <TextInput
                   style={{
-                    width: '80%',
+                    width: '70%',
                     height: 30,
                     borderBottomWidth: 2,
                     paddingLeft: 10,
@@ -188,6 +188,7 @@ export default class SignUp extends React.Component {
                   placeholder="Confirm Password"
                   placeholderTextColor="gray"
                 />
+           <Feather name="eye-off" size={24} color="blue" />
               </View>
 
               <TouchableOpacity
