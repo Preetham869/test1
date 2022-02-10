@@ -46,7 +46,7 @@ export default class Login extends React.Component {
             source={require('../assets/bg1.jpg')}
             style={{
               flex: 1,
-              resizeMode: 'center',
+              resizeMode: 'contain',
             }}>
             <ScrollView>
               <Image
@@ -64,25 +64,25 @@ export default class Login extends React.Component {
                 style={{
                   flexDirection: 'row',
                   width: '90%',
-                  height: 35,
+                  height: 45,
                   alignSelf: 'center',
                   marginTop: 30,
                   justifyContent: 'center',
                   alignItems: 'center',
-                  backgroundColor:'gray',
+                  backgroundColor:'white',
                   borderRadius:10
                 }}>
-                <FontAwesome name="at" size={24} color="white" />
+                <FontAwesome name="at" size={24} color="black" />
                 <TextInput
                   style={{
                     width: '80%',
                     height: 30,
                     borderBottomWidth: 2,
                     paddingLeft: 10,
-                    borderBottomColor: 'white',
+                    borderBottomColor: 'black',
                   }}
                   placeholder="Email ID"
-                  placeholderTextColor="silver"
+                  placeholderTextColor="gray"
                 />
               </View>
 
@@ -90,27 +90,27 @@ export default class Login extends React.Component {
                 style={{
                   flexDirection: 'row',
                   width: '90%',
-                  height: 35,
+                  height: 45,
                   alignSelf: 'center',
                   marginTop: 30,
                   justifyContent: 'center',
                   alignItems: 'center',
-                  backgroundColor:'gray',
+                  backgroundColor:'white',
                   borderRadius:10
                 }}>
-                <MaterialCommunityIcons name="lock" size={24} color="white" />
+                <MaterialCommunityIcons name="lock" size={24} color="black" />
                 <TextInput
                   style={{
                     width: '72%',
                     height: 30,
                     borderBottomWidth: 2,
                     paddingLeft: 10,
-                    borderBottomColor: 'white',
+                    borderBottomColor: 'black',
                   }}
                   placeholder="Password"
-                  placeholderTextColor="silver"
+                  placeholderTextColor="gray"
                 />
-                <Feather name="eye-off" size={24} color="white" />
+                <Feather name="eye-off" size={24} color="black" />
               </View>
 
            <TouchableOpacity>
